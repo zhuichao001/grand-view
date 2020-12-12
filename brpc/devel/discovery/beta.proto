@@ -1,0 +1,17 @@
+
+syntax="proto2";
+package discovery;
+
+option cc_generic_services = true;
+
+message BetaRequest {
+      required string message = 1;
+};
+
+message BetaResponse {
+      required string message = 1;
+};
+
+service BetaService {
+      rpc Beta(BetaRequest) returns (BetaResponse);
+};
