@@ -9,11 +9,11 @@
 
 DEFINE_bool(check_term, true, "Check if the leader changed to another term");
 DEFINE_bool(disable_cli, false, "Don't allow raft_cli access this node");
-DEFINE_bool(log_applied_task, false, "Print notice log when a task is applied");
+DEFINE_bool(log_applied_task, true, "Print notice log when a task is applied");
 DEFINE_int32(election_timeout_ms, 5000, "Start election in milliseconds if lost leader");
 DEFINE_int32(port, 8100, "Listen port of this peer");
 DEFINE_int32(snapshot_interval, 30, "Interval between each snapshot");
-DEFINE_string(conf, "", "Initial configuration of the replication group");
+DEFINE_string(conf, "127.0.0.1:8100,127.0.0.1:8101,127.0.0.1:8102", "Initial configuration of the replication group");
 DEFINE_string(data_path, "./data", "Path of data stored on");
 DEFINE_string(group, "Lighter", "Id of the replication group");
 

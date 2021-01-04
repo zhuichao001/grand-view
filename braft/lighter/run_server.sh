@@ -42,7 +42,7 @@ export TCMALLOC_SAMPLE_PARAMETER=524288
 
 for ((i=0; i<$FLAGS_server_num; ++i)); do
     mkdir -p runtime/$i
-    cp ./lighter_server runtime/$i
+    cp ./build/lighter_server runtime/$i
     cd runtime/$i
     ${VALGRIND} ./lighter_server \
         -bthread_concurrency=${FLAGS_bthread_concurrency}\

@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8.10)
 project(lighter C CXX)
 
 option(EXAMPLE_LINK_SO "Whether examples are linked dynamically" OFF)
-option(LINK_TCMALLOC "Link tcmalloc if possible" ON)
+option(LINK_TCMALLOC "Link tcmalloc if possible" OFF)
 
 execute_process(
     COMMAND bash -c "find ${CMAKE_SOURCE_DIR}/../.. -type d -path \"*output/include/braft\" | xargs dirname | xargs dirname | tr -d '\n'"
