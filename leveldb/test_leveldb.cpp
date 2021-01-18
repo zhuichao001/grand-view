@@ -14,8 +14,8 @@ int main(void) {
     leveldb::Status status = leveldb::DB::Open(options, "/tmp/testdb", &db);
     assert(status.ok());
 
-    std::string key = "foo";
-    std::string val = "bar";
+    std::string key = "k_foo";
+    std::string val = "v_bar";
 
     leveldb::Status s = db->Put(leveldb::WriteOptions(), key, val);
     if(!s.ok()){
